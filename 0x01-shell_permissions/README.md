@@ -12,7 +12,7 @@ Exercise 4: touch hello Create an empty file called hello.
 
 Exercise 5: chmod 744 hello Add execute permission to the owner of the file hello
 
-Exercise 6: chmod 754,o+r hello Add execute permission to user and group owner,and read permission to others for file hello
+Exercise 6: chmod 754 hello Add execute permission to user and group owner,and read permission to others for file hello
 
 Exercise 7: chmod 777 hello Add execution permission to all for file hello.
 
