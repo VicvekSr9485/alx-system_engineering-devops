@@ -5,7 +5,7 @@
 # "bad luck from Italy" for the 17th loop iteration
 
 count=1
-while (($count <= 20))
+while ((count <= 20))
 do
 echo "$count"
 case $count in
