@@ -9,14 +9,13 @@
  *
  * Return: Always 0.
  */
-
 int infinite_while(void)
 {
-    while (1)
-    {
-        sleep(1);
-    }
-    return (0);
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
 /**
@@ -24,22 +23,25 @@ int infinite_while(void)
  *
  * Return: Always 0.
  */
- int main(void)
- {
-    pid_t pid;
-    int i = 0;
+int main(void)
+{
+	pid_t pid;
+	char count = 0;
 
-    while (i < 5){
-        pid = fork();
-        if (pid > 0){
-            printf("Zombie process created, PID: %d\n", pid);
-            sleep(1);
-            i++;
-        }
-        else
-                exit(0);
-                }
-        infinite_while();
+	while (count < 5)
+	{
+		pid = fork();
+		if (pid > 0)
+		{
+			printf("Zombie process created, PID: %d\n", pid);
+			sleep(1);
+			count++;
+		}
+		else
+			exit(0);
+	}
 
-        return 0;
+	infinite_while();
+
+	return (0);
 }
