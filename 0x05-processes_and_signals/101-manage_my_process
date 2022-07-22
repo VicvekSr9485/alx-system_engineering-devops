@@ -35,4 +35,3 @@ elif [ "$1" = "restart" ]; then
 else
 	echo "Usage: manage_my_process {start|stop|restart}"
 fi
-done
