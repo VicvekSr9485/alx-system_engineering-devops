@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # ssh config file
-Host 7845-web-01
-	Hostname 3.238.114.100
-	User ubuntu
-	PasswordAuthentication no
-	IdentityFile ~/.ssh/school
+Host 3.238.114.100
+IdentityFile ~/.ssh/school
+PasswordAuthentication no
