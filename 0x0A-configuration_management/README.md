@@ -1,5 +1,5 @@
 # System Configuration Management Project at ALX-HOLBERTON Coding School
-This is a the beginning of the System Configuration Management(also know a IT Automation System) using Puppet.
+This is a the beginning of the System Configuration Management(also known a IT Automation System) using Puppet.
 
 # Requirements
 # General
