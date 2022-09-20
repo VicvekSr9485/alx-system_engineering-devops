@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script that installs Nginx server, redirects /redirect_me and customizes 404 not found
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" >> /var/www/html/error_404.html
+sudo sed -i '25i\	error_page 404 /error_404.html;' /etc/nginx/sites-available/default
+sudo service nginx restart
