@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
 # This script debugs why nginx is not listening on port 80
+
+sudo service nginx start
