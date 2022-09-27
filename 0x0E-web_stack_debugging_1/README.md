@@ -1,5 +1,6 @@
 This Directory Contains the Second Web Stack Debugging Project at ALX-HOLBERTON Coding School
 # Concepts
+![B4eeypV](https://user-images.githubusercontent.com/85700432/192465783-bcd26977-4352-432e-a7be-5737fbaa0e89.jpg)
 
 # Requirements
 # General
