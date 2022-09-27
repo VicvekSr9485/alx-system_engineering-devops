@@ -1,5 +1,7 @@
 Load Balancer Project at ALX-HOLBERTON Coding School
 
+![qfdked8](https://user-images.githubusercontent.com/85700432/192449905-061566be-91da-4a04-a20f-106233f99a77.png)
+
 # Requirements
 # General
 * Allowed editors: vi, vim, emacs
