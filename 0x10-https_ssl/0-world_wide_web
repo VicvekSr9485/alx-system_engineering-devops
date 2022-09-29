@@ -1,2 +1,23 @@
 #!/usr/bin/env bash
 # configuring a subdomian for my web servers
+
+if [ "$#" -lt 2 ]
+then
+    for subd in www lb-01 web-01 web-02
+    do
+	dig "$subd.$1" | awk -v subd="$subd" '/ANSWER SECTION:/ {
+                                              getline; print "The subdomain",
+                                              subd,"is a",
+                                              $(NF-1),"record and points",
+                                              "to",$NF
+                                             }'
+
+   done
+else
+    dig "$2.$1" | awk -v subd="$2" '/ANSWER SECTION:/ {
+                                              getline; print "The subdomain",
+                                              subd,"is a",
+                                              $(NF-1),"record and points",
+                                              "to",$NF
+                                             }'
+fi
