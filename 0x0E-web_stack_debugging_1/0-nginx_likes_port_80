@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script debugs why nginx is not listening on port 80
-sudo sed -i "s/etc/nginx/sites-enabled/sites-available/" /etc/nginx/nginx.conf
+sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
 sudo service nginx start
