@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Export all databases to backup.sql //mysqldump -u [username] -p [database name] > [database name].sql
+mysqldump -u root -p"$1" --all-databases > backup.sql
+tar -czvf "$(date +%d-%m-%Y).tar.gz" backup.sql
