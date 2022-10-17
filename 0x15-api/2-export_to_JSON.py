@@ -21,6 +21,7 @@ def get_user_todo_list():
         task['completed'] = todo.get('completed')
         task['username'] = user.get('username')
         complete.append(task)
+
     json_task = {}
     json_task[employee_id] = complete
     with open(path, 'w') as f:
