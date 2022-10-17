@@ -1,32 +1,30 @@
 #!/usr/bin/python3
-
-"""This module gets employer todo list from
-https://jsonplaceholder.typicode.com/todos/
-"""
+""" Script that uses JSONPlaceholder API to get information about employee """
 import json
 import requests
 import sys
 
 
-def get_user_todo_list():
-    employee_id = sys.argv[1]
-    url1 = 'https://jsonplaceholder.typicode.com/users/%s' % employee_id
-    url2 = '%s/todos' % url1
-    todo_list = requests.get(url2).json()
-    user = requests.get(url1).json()
-    path = "{}.json".format(employee_id)
-    for todo in todo_list:
-        task = {}
-        task['task'] = todo.get('title')
-        task['completed'] = todo.get('completed')
-        task['username'] = user.get('username')
-        complete.append(task)
+if __name__ == "__main__":
+    url = 'https://jsonplaceholder.typicode.com/'
 
-    json_task = {}
-    json_task[employee_id] = complete
-    with open(path, 'w') as f:
-        json.dump(json_task, f)
+    userid = sys.argv[1]
+    user = '{}users/{}'.format(url, userid)
+    res = requests.get(user)
+    json_o = res.json()
+    name = json_o.get('username')
 
+    todos = '{}todos?userId={}'.format(url, userid)
+    res = requests.get(todos)
+    tasks = res.json()
+    l_task = []
+    for task in tasks:
+        dict_task = {"task": task.get('title'),
+                     "completed": task.get('completed'),
+                     "username": name}
+        l_task.append(dict_task)
 
-if __name__ == '__main__':
-    get_user_todo_list()
+    d_task = {str(userid): l_task}
+    filename = '{}.json'.format(userid)
+    with open(filename, mode='w') as f:
+        json.dump(d_task, f)
