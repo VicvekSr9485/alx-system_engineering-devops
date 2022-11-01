@@ -2,8 +2,8 @@
 """ This module contains a function that queries
     RedditAPI for subreddits """
 
-import requests
 import json
+import requests
 import sys
 
 
