@@ -29,7 +29,7 @@ From 7:43 PM to 10:16 PM UTC, attempts to access sudo-dev web services resulted 
 
 The monitoring system alerted our engineers at 7:43 PM UTC, they swiftly started investigating the issue. After a series of debugging it was eventually discovered that some Invalid syntaxes were included in the change recently pushed to the codebase and this has disruption some other systems as there are gigantic infrastructure involved. Traffic was permanently queued and could not be processed. The servers were unable to handle requests and at 7:43 PM UTC, the service outage began.
 
-**Resolution and recovery**
+**Resolution and Recovery**
 
 At 7:43 PM UTC, the monitoring systems alerted our engineers who investigated and quickly escalated the issue. By 7:53 PM, the incident response team identified that the monitoring system was exacerbating the problem caused by this bug.
 
