@@ -4,7 +4,10 @@ The following is the incident report for the sudo-dev web services outage that o
 
 **Issue Summary**
 
-From 7:43 PM to 10:16 PM UTC, attempts to access sudo-dev web services resulted in a failure and about 320 errors were recorded within this time frame. At its peak, the issue affected 100% of traffic to this web infrastructure. All resources were unavailable to utilize within this period of time. The root cause of this downtime was some invalid configuration push to the codebase which broke the whole system down. 
+From 7:43 PM to 10:16 PM UTC, attempts to access sudo-dev web services resulted in a failure and about 320 errors were recorded within this time frame. At its peak, the issue affected 100% of traffic to this web infrastructure. All resources were unavailable to utilize within this period of time. The root cause of this downtime was some invalid configuration push to the codebase which broke the whole system down.
+
+![download (1)](https://user-images.githubusercontent.com/85700432/200194581-f9d16644-043d-4390-a6f7-38db6a2a9cf9.jpg)
+
 
 **Timeline (All Times Coordinated Universal Time)**
 
@@ -18,6 +21,9 @@ From 7:43 PM to 10:16 PM UTC, attempts to access sudo-dev web services resulted 
 * 9:58 PM: Bugs identified and fixed
 * 10:01 PM: Server restarts initiated
 * 10:16 PM: 100% of traffic back online
+
+![images](https://user-images.githubusercontent.com/85700432/200194617-571f1aea-e2be-45f1-95d8-9d1644a12656.png)
+
 
 **Root Cause**
 
