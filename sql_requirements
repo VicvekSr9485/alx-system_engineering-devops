@@ -1,0 +1,15 @@
+sudo apt -y install mysql-server
+sudo service mysql start
+sudo apt-get -y install python3-dev
+sudo apt-get install libmysqlclient-dev
+sudo apt-get install zlib1g-dev
+sudo pip3 install mysqlclient
+sudo pip3 install SQLAlchemy
+pip3 uninstall Fabric
+sudo apt-get install libffi-dev
+cat setup_mysql_dev.sql | sudo mysql -hlocalhost -uroot -p
+cat 10-dump.sql | sudo mysql -uroot -p
+hbnb_dev_pwd
+ echo 'create State name="California"' | sudo HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py 
+ sudo HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./main_place_amenities.py
+ 
